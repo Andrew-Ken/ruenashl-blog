@@ -1,0 +1,12 @@
+rails generate scaffold Post title:string body:text status_id:integer
+
+=============
+
+# Status model scaffold
+rails generate scaffold Status name:string
+ 
+# Comment model generator (not a full scaffold)
+rails generate model Comment author_name:string author_email:string author_url:string body:text post:references
+ 
+# Comments controller generator
+rails generate controller Comments
