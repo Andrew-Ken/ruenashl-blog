@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_filter :authenticate_user!, :only => [:destroy]
+  
   def create
     # We need to get the post so that Rails knows where to assign the comment
     @post = Post.find(params[:post_id])
