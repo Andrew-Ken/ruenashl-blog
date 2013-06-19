@@ -4,8 +4,10 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
-
+    # Create two different variables for published and draft posts
+    # We can use our "Status" relationship to sort the posts
+    @posts = Status.find_by_name("Published").posts
+    @drafts = Status.find_by_name("Draft").posts
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -16,7 +18,8 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
-
+    # Make sure you create a new comment model for adding comments to posts
+    @comment = Comment.new
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @post }

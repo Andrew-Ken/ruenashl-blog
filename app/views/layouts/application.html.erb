@@ -7,8 +7,12 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
+
+		
+	</div>
 <% if user_signed_in? %>
-	<p>Hello, <%= current_user.email %> | <%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
+	<p><%= gravatar_image_tag(current_user.email, :alt => current_user.email, :gravatar => { :size => 32 }) %> Hello, <%= current_user.email %> | <%= link_to "Edit Account", edit_user_registration_path   %> | <%= link_to "Log out", destroy_user_session_path, :method => :delete %></p>
+	
 <% else %>
 	<p><%= link_to "Sign in", new_user_session_path %></p>
 <% end %>

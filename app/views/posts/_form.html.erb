@@ -15,10 +15,18 @@
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
+
   <div class="field">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </div>
+
+<!-- Tags -->
+<div class="field">
+  <%= f.label "Tags" %><br />
+  <%= f.text_field :tag_list %>
+</div>
+
   <div class="field">
     <%= f.label "Status" %><br />
   	<%= collection_select(:post, :status_id, Status.all, :id, :name) %>

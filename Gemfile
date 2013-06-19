@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.12'
 gem 'devise'
-
+gem 'gravatar_image_tag'
+gem 'acts-as-taggable-on'
+gem "twitter-bootstrap-rails"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -12,7 +14,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :production do
-   gem 'pg'
+ #  gem 'pg'
   gem 'thin'
 end
 
