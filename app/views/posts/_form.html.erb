@@ -16,9 +16,14 @@
     <%= f.text_field :title %>
   </div>
 
+
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+	<%= f.label :body %><br />
+	<div id="widearea-container">
+		<textarea placeholder="Type something..." data-widearea="enable"	<%= f.text_area :body %>
+
+	</textarea>
+	</div>
   </div>
 
 <!-- Tags -->
@@ -35,3 +40,7 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  wideArea();
+</script>
