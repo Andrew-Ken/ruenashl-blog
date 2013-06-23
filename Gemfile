@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '1.9.2'
-
 gem 'rails', '3.2.12'
 gem 'devise'
 gem 'gravatar_image_tag'
