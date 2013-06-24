@@ -3,6 +3,7 @@
     <li><%= link_to post.title, post %> (<%= post.comments.count %> comments)</li>
   </ul>
 <% end %>
+
 <br />
  
 <% if user_signed_in? %>
@@ -15,3 +16,4 @@
 	<% end %>
  
 <% end %>
+

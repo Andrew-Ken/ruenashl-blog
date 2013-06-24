@@ -4,10 +4,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    # Create two different variables for published and draft posts
-    # We can use our "Status" relationship to sort the posts
     @posts = Status.find_by_name("Published").posts
     @drafts = Status.find_by_name("Draft").posts
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }

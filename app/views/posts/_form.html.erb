@@ -36,6 +36,7 @@
     <%= f.label "Status" %><br />
   	<%= collection_select(:post, :status_id, Status.all, :id, :name) %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
