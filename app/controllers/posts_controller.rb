@@ -4,12 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Status.find_by_name("Published").posts
-    @drafts = Status.find_by_name("Draft").posts
+    @posts = Status.find_by_name("Published").post
+    @drafts = Status.find_by_name("Draft").post
     
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @posts }
+      format.json { render json: @post }
     end
   end
 
