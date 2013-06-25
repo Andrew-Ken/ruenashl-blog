@@ -1,10 +1,12 @@
 ---
+nicEditorIcons.gif: nicEditorIcons-6ed86d9880509c9176f6b83f0a408aa4.gif
+nicEditorIcons/index.gif: nicEditorIcons-6ed86d9880509c9176f6b83f0a408aa4.gif
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-2359ba56189e50aef18c93f879964df8.js
-application/index.js: application-2359ba56189e50aef18c93f879964df8.js
-application.css: application-7d5447485ade7d994d76f4aa91c63b1d.css
-application/index.css: application-7d5447485ade7d994d76f4aa91c63b1d.css
+application.js: application-bbc77c6bf7d421dbaa42ebc38aeccb9b.js
+application/index.js: application-bbc77c6bf7d421dbaa42ebc38aeccb9b.js
+application.css: application-eebd6e96aea7ca8b58e7db73c39fef2b.css
+application/index.css: application-eebd6e96aea7ca8b58e7db73c39fef2b.css
 jquery.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 jquery/index.min.map: jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map
 fontawesome-webfont.eot: fontawesome-webfont-b49e662c23140944a17d6301d2259446.eot
