@@ -4,11 +4,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  if Rails.env == 'production'
-    include Cloudinary::CarrierWave
-  else
-    include CarrierWave::MiniMagick
-  end
+  #include CarrierWave::MiniMagick
+  include Cloudinary::CarrierWave
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -29,7 +26,13 @@ class AvatarUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  process :resize_to_fill => [200, 300]
+  #process :resize_to_fill => [200, 300]
+  process :convert => 'png'
+  process :tags => ['post_picture']
+  
+  version :standard do
+    process :resize_to_fill => [100, 150, :north]
+  end
   #
   # def scale(width, height)
   #   # do something
