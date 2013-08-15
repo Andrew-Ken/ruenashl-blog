@@ -6,7 +6,8 @@
   .wook
     - 20.times.each do |i|
       - @posts.each do |post|
-        = image_tag post.image_url, {class: :wookmark, width: '200px'}
+        = link_to image_tag(post.image_url, {class: :wookmark, width: '200px'}), post
+
 :javascript
   $(window).load(function(){
     $('.wookmark').wookmark({
