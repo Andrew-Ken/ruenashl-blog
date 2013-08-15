@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: lion
+  api_key: '869726167222978'
+  api_secret: SnHOC9Noo1YWHq1SwxpeGjhfPJU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: lion
+  api_key: '869726167222978'
+  api_secret: SnHOC9Noo1YWHq1SwxpeGjhfPJU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: lion
+  api_key: '869726167222978'
+  api_secret: SnHOC9Noo1YWHq1SwxpeGjhfPJU
+  enhance_image_tag: true
+  static_image_support: false
