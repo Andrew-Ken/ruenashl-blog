@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130619145910) do
+ActiveRecord::Schema.define(:version => 20130815005110) do
 
   create_table "comments", :force => true do |t|
     t.string   "author_name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20130619145910) do
     t.integer  "status_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "image"
   end
 
   create_table "statuses", :force => true do |t|
