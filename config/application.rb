@@ -1,5 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-require 'attachinary/orm/active_record'
+
 require 'rails/all'
 
 if defined?(Bundler)
@@ -58,6 +58,5 @@ module RuenashlBlog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
   end
 end

@@ -4,14 +4,8 @@
 <p id="notice"><%= notice %></p>
  
 <h2><%= @post.title %></h2>
-
-
+ 
 <p><%= @post.body %></p>
-
-
-<% @user.photos.each do |photo| %>
-    <%= cl_image_tag(photo.path, { size: '125x125', crop: :fit }) %>
-<% end %>
  
 <p>
   <b>Status:</b>
