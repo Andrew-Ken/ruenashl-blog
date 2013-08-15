@@ -16,6 +16,12 @@
     <%= f.text_field :title %>
   </div>
 
+  <div class='field'>
+    <%= image_tag(@post.image_url) if @post.image? %>
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </div>
+
 
   <div class="field">
 	<%= f.label :body %><br />
