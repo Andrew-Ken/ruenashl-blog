@@ -5,7 +5,10 @@ gem 'rails', '3.2.12'
 gem 'devise'
 gem 'gravatar_image_tag'
 gem 'acts-as-taggable-on'
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+gem 'carrierwave'
+gem 'cloudinary'
+gem 'attachinary'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
