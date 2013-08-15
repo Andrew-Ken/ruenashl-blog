@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ruenashl Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "libs/jquery.min.js" %>
+  <%= javascript_include_tag "libs/jquery.imagesloaded.js" %>
+  <%= javascript_include_tag "libs/jquery.colorbox-min.js" %>
+  <%= javascript_include_tag "libs/jquery.wookmark.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<% if user_signed_in? %>
+
+	<div class="navbar navbar-static-top">
+	  <div class="navbar-inner">
+		  <a class="brand" href=""><%= gravatar_image_tag(current_user.email, :alt => current_user.email, :gravatar => { :size => 16 }) %> <strong><%= current_user.email %></strong></a>
+			<ul class="nav">
+				<li><%= link_to "Edit Account", edit_user_registration_path %></li>
+				<li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+			</ul>
+			<%= link_to 'New Post', new_post_path, :class => 'btn btn-small btn-success' %>
+		</div>
+	</div>
+
+	<% else %>
+		<p><%= link_to "Sign in", new_user_session_path %></p>
+	<% end %>
+	<div class="container">
+
+		<div class="page-header">
+			<h1>Ruenashl-blog <small>TC 359</small></h1>
+		</div>
+		<%= yield %>
+</div>
+</body>
+</html>

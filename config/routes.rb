@@ -9,6 +9,9 @@ RuenashlBlog::Application.routes.draw do
 
   resources :posts do
     resources :comments
+    collection do
+      get 'wookmark'
+    end
   end
 
 
@@ -62,7 +65,7 @@ RuenashlBlog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'posts#index'
+  root :to => 'posts#wookmark'
 
   # See how all your routes lay out with "rake routes"
 

@@ -9,6 +9,7 @@ gem "twitter-bootstrap-rails"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'cloudinary'
+gem "haml-rails"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

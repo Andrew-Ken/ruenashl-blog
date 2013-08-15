@@ -1,0 +1,26 @@
+-# @posts.each do |post|
+  %ul.wook_images
+    %li
+      -# link_to image_tag(post.image_url, class: 'abc') if post.image
+#mark{style: 'position: absolute;'}      
+  .wook
+    - 20.times.each do |i|
+      - @posts.each do |post|
+        = image_tag post.image_url, {class: :wookmark, width: '200px'}
+:javascript
+  $(window).load(function(){
+    $('.wookmark').wookmark({
+      align: 'center',
+      autoResize: false,
+      container: $('.wook'),
+      ignoreInactiveItems: true,
+      itemWidth: 0,
+      fillEmptySpace: false,
+      flexibleWidth: 0,
+      offset: 2,
+      onLayoutChanged: undefined,
+      outerOffset: 0,
+      resizeDelay: 10
+    });
+  })
+  

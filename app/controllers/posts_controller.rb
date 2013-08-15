@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :edit, :create, :update, :destroy]
+  layout 'wookmark', only: :wookmark
   
   # GET /posts
   # GET /posts.json
@@ -11,6 +12,11 @@ class PostsController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @posts }
     end
+  end
+
+  def wookmark
+    @posts = Status.find_by_name("Published").posts
+    @drafts = Status.find_by_name("Draft").posts
   end
 
   # GET /posts/1
